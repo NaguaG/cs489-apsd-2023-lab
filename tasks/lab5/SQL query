@@ -1,0 +1,125 @@
+CREATE TABLE `cs489_apsd_dental_surgery`.`dentists` (
+  `dentistId` INT NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`dentistId`));
+
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`dentists` 
+ADD COLUMN `firstName` VARCHAR(45) NOT NULL AFTER `dentistId`;
+
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`dentists` 
+ADD COLUMN `lastName` VARCHAR(45) NOT NULL AFTER `firstName`;
+
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`dentists` 
+ADD COLUMN `phoneNumber` INT NOT NULL AFTER `lastName`;
+
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`dentists` 
+ADD COLUMN `email` VARCHAR(45) NOT NULL AFTER `phoneNumber`;
+
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`dentists` 
+ADD COLUMN `specilization` VARCHAR(45) NOT NULL AFTER `email`;
+
+
+Patient:
+CREATE TABLE `cs489_apsd_dental_surgery`.`patients` (
+  `patientId` INT NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`patientId`));
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`patients` 
+ADD COLUMN `firstname` VARCHAR(45) NOT NULL AFTER `patientId`;
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`patients` 
+ADD COLUMN `lastName` VARCHAR(45) NOT NULL AFTER `firstname`;
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`patients` 
+ADD COLUMN `phoneNumber` INT NOT NULL AFTER `lastName`;
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`patients` 
+ADD COLUMN `email` VARCHAR(45) NOT NULL AFTER `phoneNumber`;
+
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`patients` 
+ADD INDEX `fk_patient_address_idx` (`addressId` ASC) VISIBLE;
+;
+ALTER TABLE `cs489_apsd_dental_surgery`.`patients` 
+ADD CONSTRAINT `fk_patient_address`
+  FOREIGN KEY (`addressId`)
+  REFERENCES `cs489_apsd_dental_surgery`.`addresses` (`addressId`)
+  ON DELETE SET NULL
+  ON UPDATE RESTRICT;
+
+Surgery:
+CREATE TABLE `cs489_apsd_dental_surgery`.`surgery` (
+  `SurgeryId` INT NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`SurgeryId`));
+  
+  Address:
+  ALTER TABLE `cs489_apsd_dental_surgery`.`surgery` 
+ADD COLUMN `AddressId` INT NULL AFTER `SurgeryId`;
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`surgery` 
+ADD INDEX `fk_surgery_address_idx` (`AddressId` ASC) VISIBLE;
+;
+ALTER TABLE `cs489_apsd_dental_surgery`.`surgery` 
+ADD CONSTRAINT `fk_surgery_address`
+  FOREIGN KEY (`AddressId`)
+  REFERENCES `cs489_apsd_dental_surgery`.`addresses` (`addressId`)
+  ON DELETE SET NULL
+  ON UPDATE RESTRICT;
+
+Appointment:
+CREATE TABLE `cs489_apsd_dental_surgery`.`appointment` (
+  `AppointmentId` INT NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`AppointmentId`));
+
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`appointment` 
+ADD COLUMN `date` VARCHAR(45) NULL AFTER `appointmentId`;
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`appointment` 
+ADD COLUMN `surgeryId` INT NOT NULL AFTER `date`;
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`appointment` 
+ADD COLUMN `patientId` INT NOT NULL AFTER `surgeryId`;
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`appointment` 
+ADD COLUMN `dentistId` INT NOT NULL AFTER `patientId`;
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`appointment` 
+CHANGE COLUMN `surgeryId` `surgeryId` INT NULL ,
+ADD INDEX `fk_appointment_surgery_idx` (`surgeryId` ASC) VISIBLE;
+;
+ALTER TABLE `cs489_apsd_dental_surgery`.`appointment` 
+ADD CONSTRAINT `fk_appointment_surgery`
+  FOREIGN KEY (`surgeryId`)
+  REFERENCES `cs489_apsd_dental_surgery`.`surgery` (`SurgeryId`)
+  ON DELETE SET NULL
+  ON UPDATE RESTRICT;
+
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`appointment` 
+CHANGE COLUMN `patientId` `patientId` INT NULL ,
+ADD INDEX `fk_appointment_patient_idx` (`patientId` ASC) VISIBLE;
+;
+ALTER TABLE `cs489_apsd_dental_surgery`.`appointment` 
+ADD CONSTRAINT `fk_appointment_patient`
+  FOREIGN KEY (`patientId`)
+  REFERENCES `cs489_apsd_dental_surgery`.`patients` (`patientId`)
+  ON DELETE SET NULL
+  ON UPDATE RESTRICT;
+
+ALTER TABLE `cs489_apsd_dental_surgery`.`appointment` 
+CHANGE COLUMN `dentistId` `dentistId` INT NULL ,
+ADD INDEX `fk_appointment_dentist_idx` (`dentistId` ASC) VISIBLE;
+;
+ALTER TABLE `cs489_apsd_dental_surgery`.`appointment` 
+ADD CONSTRAINT `fk_appointment_dentist`
+  FOREIGN KEY (`dentistId`)
+  REFERENCES `cs489_apsd_dental_surgery`.`dentists` (`dentistId`)
+  ON DELETE SET NULL
+  ON UPDATE RESTRICT;
+
+
