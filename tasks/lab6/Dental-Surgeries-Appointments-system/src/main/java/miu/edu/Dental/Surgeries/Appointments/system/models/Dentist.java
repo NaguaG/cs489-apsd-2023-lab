@@ -20,4 +20,8 @@ public class Dentist {
     private String firstname;
     @OneToMany(mappedBy = "dentist")
     private List<Appointment> appointment;
+    public Dentist(String lastName, String firstname){
+        this.lastName = lastName;
+        this.firstname = firstname;
+    }
 }

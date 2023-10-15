@@ -17,10 +17,15 @@ public class Surgery {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long surgeryId;
-    private String surgeryName;
+    @Column(name = "surgeryNo")
+    private String surgeryNumber;
     @OneToOne
     @JoinColumn(name = "address_id")
     private Address address;
     @OneToMany(mappedBy = "surgery")
     private List<Appointment> appointments;
+
+    public Surgery(String surgeryNumber){
+        this.surgeryNumber = surgeryNumber;
+    }
 }

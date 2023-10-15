@@ -30,10 +30,5 @@ public class Appointment {
     @ManyToOne
     @JoinColumn(name = "dentistId")
     private Dentist dentist;
-    public Appointment(Long appointmentId, LocalDate appointmentDate, String appointmentTime, Patient patient){
-        this.appointmentId = appointmentId;
-        this.appointmentDate = appointmentDate;
-        this.appointmentTime = appointmentTime;
-        this.patient = patient;
-    }
+
 }

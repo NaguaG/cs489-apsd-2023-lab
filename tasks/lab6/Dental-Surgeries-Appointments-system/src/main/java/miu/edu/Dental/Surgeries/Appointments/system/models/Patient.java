@@ -16,15 +16,18 @@ public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long patientId;
+    @Column(name = "patNo")
+    private String patientNumber;
     private String lastName;
     private String firstName;
     @OneToOne
     private Address address;
     @OneToMany(mappedBy = "patient")
     private List<Appointment> appointments;
-    public Patient(String lastName, String firtName){
+    public Patient(String patientNumber, String lastName, String firstName){
+        this.patientNumber = patientNumber;
         this.lastName = lastName;
-        this.firstName = firtName;
+        this.firstName = firstName;
     }
 
 }
