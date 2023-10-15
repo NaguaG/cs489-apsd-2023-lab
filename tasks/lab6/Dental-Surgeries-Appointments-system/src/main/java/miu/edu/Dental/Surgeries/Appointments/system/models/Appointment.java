@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Data
 @AllArgsConstructor
@@ -16,8 +18,9 @@ public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long appointmentId;
-    private String appointmentName;
     private LocalDate appointmentDate;
+    private String appointmentTime;
+
     @ManyToOne
     @JoinColumn(name = "surgeryId")
     private Surgery surgery;
@@ -27,4 +30,10 @@ public class Appointment {
     @ManyToOne
     @JoinColumn(name = "dentistId")
     private Dentist dentist;
+    public Appointment(Long appointmentId, LocalDate appointmentDate, String appointmentTime, Patient patient){
+        this.appointmentId = appointmentId;
+        this.appointmentDate = appointmentDate;
+        this.appointmentTime = appointmentTime;
+        this.patient = patient;
+    }
 }

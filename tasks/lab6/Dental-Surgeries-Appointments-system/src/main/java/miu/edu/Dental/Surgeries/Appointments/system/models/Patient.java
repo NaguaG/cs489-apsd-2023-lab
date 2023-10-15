@@ -22,5 +22,9 @@ public class Patient {
     private Address address;
     @OneToMany(mappedBy = "patient")
     private List<Appointment> appointments;
+    public Patient(String lastName, String firtName){
+        this.lastName = lastName;
+        this.firstName = firtName;
+    }
 
 }

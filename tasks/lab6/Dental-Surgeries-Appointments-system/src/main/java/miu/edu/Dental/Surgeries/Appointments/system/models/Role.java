@@ -5,23 +5,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "addresses")
-public class Address {
+@Table(name = "roles")
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long addressId;
-    private String state;
-    private String city;
-    private String zipcode;
-    @OneToOne(mappedBy = "address")
-    private Patient patient;
-    @OneToOne(mappedBy = "address")
-    private Surgery surgery;
-
-
+    private Long roleId;
+    private String roleName;
+    @ManyToMany(mappedBy = "roles")
+    private List<User> users;
 
 }
