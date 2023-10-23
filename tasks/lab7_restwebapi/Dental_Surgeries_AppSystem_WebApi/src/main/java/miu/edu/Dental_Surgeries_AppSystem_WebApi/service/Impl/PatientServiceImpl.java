@@ -72,18 +72,28 @@ public class PatientServiceImpl implements PatientService {
     public PatientResponse updatePatient(Long patientId, PatientRequest patientRequest) throws PatientNotFoundException{
         Patient currentPatient = patientRepository.findById(patientId)
                 .orElseThrow(() -> new PatientNotFoundException(String.format("error: Patient with %d, is not found", patientId)));
-        currentPatient.setPatientNumber(patientRequest.patientNumber());
-        currentPatient.setLastName(patientRequest.lastName());
-        currentPatient.setFirstName(patientRequest.firstName());
-        currentPatient.setAddress(new Address(patientRequest.address().state(),patientRequest.address().city(),
-                patientRequest.address().zipcode()));
-        var updatedPatient = patientRepository.save(currentPatient);
-        PatientResponse patientResponse = new PatientResponse(updatedPatient.getPatientId(),
-                updatedPatient.getPatientNumber(), updatedPatient.getLastName(),
-                updatedPatient.getFirstName(), new AddressResponse(updatedPatient.getAddress().getAddressId(),
-                updatedPatient.getAddress().getState(), updatedPatient.getAddress().getCity(),
-                updatedPatient.getAddress().getZipcode()));
-        return patientResponse;
+        if(currentPatient != null){
+            currentPatient.setPatientNumber(patientRequest.patientNumber());
+            currentPatient.setLastName(patientRequest.lastName());
+            currentPatient.setFirstName(patientRequest.firstName());
+            currentPatient.setAddress(new Address(patientRequest.address().state(),patientRequest.address().city(),
+                    patientRequest.address().zipcode()));
+            var updatedPatient = patientRepository.save(currentPatient);
+            PatientResponse patientResponse = new PatientResponse(updatedPatient.getPatientId(),
+                    updatedPatient.getPatientNumber(), updatedPatient.getLastName(),
+                    updatedPatient.getFirstName(), new AddressResponse(updatedPatient.getAddress().getAddressId(),
+                    updatedPatient.getAddress().getState(), updatedPatient.getAddress().getCity(),
+                    updatedPatient.getAddress().getZipcode()));
+            return patientResponse;
+
+        }else{
+            PatientResponse patientResponse = new PatientResponse(currentPatient.getPatientId(),
+                    currentPatient.getPatientNumber(), currentPatient.getLastName(),
+                    currentPatient.getFirstName(), new AddressResponse(currentPatient.getAddress().getAddressId(),
+                    currentPatient.getAddress().getState(), currentPatient.getAddress().getCity(),
+                    currentPatient.getAddress().getZipcode()));
+            return patientResponse;
+        }
 
     }
 
