@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cbcf08e9-84a0-483c-8e35-b769ab2070f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/config/DentalSurgeryWebApiSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/controller/userAuth/UserAuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/dto/userAuth/UserAuthRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/filter/JWTAuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/service/Impl/DentalSurgeryUserDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/utils/JWTManagementUtilityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/DentalSurgeriesAppSystemWebApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/DentalSurgeriesAppSystemWebApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/advice/DentalSurgeryWebApiExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/advice/DentalSurgeryWebApiExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/repository/UserRepository.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2XGKdPoA4ZwPxpQeTZFjUtACh1B" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/naranguaganbaatar/git/cs489-apsd-2023-lab/tasks/lab9_springSecurity/sc489_apsd_dentalSurgery/src/main/java/miu/edu/sc489_apsd_dentalSurgery"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/miu/edu/sc489_apsd_dentalSurgery" />
+      <recent name="$PROJECT_DIR$/src/main/java/miu/edu/sc489_apsd_dentalSurgery/repository" />
+      <recent name="$PROJECT_DIR$/src/main/java/miu/edu/sc489_apsd_dentalSurgery/model" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Sc489ApsdDentalSurgeryApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="miu.edu.sc489_apsd_dentalSurgery.Sc489ApsdDentalSurgeryApplication" />
+      <module name="sc489_apsd_dentalSurgery" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="miu.edu.sc489_apsd_dentalSurgery.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Sc489ApsdDentalSurgeryApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cbcf08e9-84a0-483c-8e35-b769ab2070f9" name="Changes" comment="" />
+      <created>1698250062916</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698250062916</updated>
+    </task>
+    <servers />
+  </component>
+</project>
