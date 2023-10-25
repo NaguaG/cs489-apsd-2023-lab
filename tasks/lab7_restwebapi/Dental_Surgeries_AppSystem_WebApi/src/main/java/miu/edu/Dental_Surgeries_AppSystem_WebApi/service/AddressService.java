@@ -12,6 +12,7 @@ public interface AddressService {
     public Address getAddressById(Long addressId) throws AddressNotFoundException;
     public Address updateAddress(Address address) throws AddressNotFoundException;
     public void deleteAddress(Address address) throws AddressNotFoundException;
+    public void deleteAddressById(Long addressId) throws AddressNotFoundException;
     public Address addNewAddress(Address address);
 
 

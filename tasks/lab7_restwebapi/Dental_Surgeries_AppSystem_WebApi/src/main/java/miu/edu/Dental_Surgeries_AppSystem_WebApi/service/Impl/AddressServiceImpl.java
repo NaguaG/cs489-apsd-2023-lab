@@ -6,6 +6,7 @@ import miu.edu.Dental_Surgeries_AppSystem_WebApi.exception.AddressNotFoundExcept
 import miu.edu.Dental_Surgeries_AppSystem_WebApi.model.Address;
 import miu.edu.Dental_Surgeries_AppSystem_WebApi.model.Patient;
 import miu.edu.Dental_Surgeries_AppSystem_WebApi.repository.AddressRepository;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import miu.edu.Dental_Surgeries_AppSystem_WebApi.service.AddressService;
 
@@ -19,7 +20,7 @@ public class AddressServiceImpl implements AddressService {
     }
     @Override
     public List<AddressResponse2> getAllAddresses() {
-        return addressRepository.findAll()
+        return addressRepository.findAll(Sort.by("city"))
                 .stream()
                 .map(a -> new AddressResponse2(
                         a.getAddressId(),
@@ -49,6 +50,11 @@ public class AddressServiceImpl implements AddressService {
     @Override
     public void deleteAddress(Address address) throws AddressNotFoundException{
         addressRepository.delete(address);
+
+    }
+    @Override
+    public void deleteAddressById(Long addressId) throws AddressNotFoundException{
+        addressRepository.deleteById(addressId);
 
     }
 

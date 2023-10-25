@@ -47,8 +47,20 @@ public class PatientController {
         return ResponseEntity.ok(patientService.updatePatient(patientId, patientRequest));
     }
     @DeleteMapping(value = "/delete/{patientId}")
-    public void deletePatient(@PathVariable Long patientId) throws PatientNotFoundException{
+    public ResponseEntity<Void> deletePatient(@PathVariable Long patientId) throws PatientNotFoundException{
         patientService.deletePatient(patientId);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @DeleteMapping(value = "/address/delete/{patientId}")
+    public ResponseEntity<Void> deletePatientAddress(@PathVariable Long patientId) throws PatientNotFoundException{
+        patientService.deletePatientAddressById(patientId);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+    @GetMapping(value = "/search/{searchString}")
+    public ResponseEntity<List<Patient>> searchPatient(@PathVariable String searchString){
+        return ResponseEntity.ok(patientService.searchPatient(searchString));
+
     }
     //Queries all the Patient data for the patient(s) whose data matches the input searchString.
 //    @GetMapping(value = "/adsweb/api/v1/patient/search/{searchString}")

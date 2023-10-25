@@ -12,5 +12,9 @@ public interface PatientService {
     PatientResponse getPatientById(Long patientId) throws PatientNotFoundException;
     PatientResponse updatePatient(Long patientId, PatientRequest patientRequest) throws PatientNotFoundException;
     void deletePatient(Long patientId) throws PatientNotFoundException;
+    void deletePatientAddressById(Long patientId) throws PatientNotFoundException;
+
     PatientResponse addNewPatient(PatientRequest patientRequest);
+    List<Patient> searchPatient(String searchString);
+
 }

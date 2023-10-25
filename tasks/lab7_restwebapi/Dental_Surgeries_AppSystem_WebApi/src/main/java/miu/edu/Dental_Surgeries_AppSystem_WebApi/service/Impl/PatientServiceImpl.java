@@ -16,9 +16,11 @@ import java.util.List;
 @Service
 public class PatientServiceImpl implements PatientService {
     private PatientRepository patientRepository;
-    public PatientServiceImpl(PatientRepository patientRepository){
+    private AddressRepository addressRepository;
+    public PatientServiceImpl(PatientRepository patientRepository, AddressRepository addressRepository){
 
         this.patientRepository = patientRepository;
+        this.addressRepository = addressRepository;
     }
     @Override
     public List<PatientResponse> getAllPatient() {
@@ -69,6 +71,13 @@ public class PatientServiceImpl implements PatientService {
     }
 
     @Override
+    public List<Patient> searchPatient(String searchString) {
+        return patientRepository.findPatientsByPatientNumberContainingOrLastNameContainingOrFirstNameContainingOrAddress_StateContainingOrAddress_CityContainingOrAddressZipcode(
+                searchString, searchString, searchString, searchString, searchString, searchString
+        );
+    }
+
+    @Override
     public PatientResponse updatePatient(Long patientId, PatientRequest patientRequest) throws PatientNotFoundException{
         Patient currentPatient = patientRepository.findById(patientId)
                 .orElseThrow(() -> new PatientNotFoundException(String.format("error: Patient with %d, is not found", patientId)));
@@ -101,6 +110,19 @@ public class PatientServiceImpl implements PatientService {
     public void deletePatient(Long patientId) throws PatientNotFoundException{
 
         patientRepository.deleteById(patientId);
+    }
+
+    @Override
+    public void deletePatientAddressById(Long patientId) throws PatientNotFoundException{
+        var patient = patientRepository.findById(patientId)
+                .orElseThrow(() -> new PatientNotFoundException(String.format("error: Patient with %d, is not found", patientId)));
+        var address = patient.getAddress();
+        if(address != null){
+            patient.setAddress(null);
+            patientRepository.save(patient);
+            addressRepository.deleteById(address.getAddressId());
+        }
+
     }
 
 
