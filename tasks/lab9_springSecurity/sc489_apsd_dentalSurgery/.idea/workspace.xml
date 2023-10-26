@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbcf08e9-84a0-483c-8e35-b769ab2070f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/config/DentalSurgeryWebApiSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/controller/userAuth/UserAuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/dto/userAuth/UserAuthRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/filter/JWTAuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/service/Impl/DentalSurgeryUserDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/utils/JWTManagementUtilityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/DentalSurgeriesAppSystemWebApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/DentalSurgeriesAppSystemWebApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/advice/DentalSurgeryWebApiExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/advice/DentalSurgeryWebApiExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab7_restwebapi/Dental_Surgeries_AppSystem_WebApi/src/main/java/miu/edu/Dental_Surgeries_AppSystem_WebApi/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
